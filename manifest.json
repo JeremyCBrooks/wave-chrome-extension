@@ -1,0 +1,14 @@
+{
+    "name": "Wave Helper",
+    "version": "1.0.0",
+    "description": "Helper functions for various Wave workflows",
+    "manifest_version": 3,
+    "author": "Jeremy Brooks",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Wave Helper"
+    },
+    "permissions": [
+        "storage"
+    ]
+}

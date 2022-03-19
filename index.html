@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wave Helper</title>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {margin-bottom: 1em; width: 450px;}
+    </style>
+</head>
+<body>
+    <div>
+        <button id="show_customer_statements_tab" class="btn btn-primary nav-button" data-page-id="customer_statements_tab">Customer Statements</button>
+        <button id="show_settings_tab" class="btn btn-primary nav-button" data-page-id="settings_tab">Settings</button>
+    </div>
+    <div class="container mt-3 w-100">
+        <div id="customer_statements_tab" class="content-page">
+            <h2 class="text-center">Customer Statements</h2>
+            <table id="customer_statements_table" class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Total Owed</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <button class="btn btn-sm btn-primary" id="btn_open_all_statements">Open All</button>
+        </div>
+
+        <div id="settings_tab" class="content-page">
+            <h2 class="text-center">Settings</h2>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Value</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>API Token</td>
+                    <td><input id="api_token" type="password"></td>
+                </tr>
+                <tr>
+                    <td>Business ID</td>
+                    <td><input id="business_id" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Business GUID</td>
+                    <td><input id="business_guid" type="text"></td>
+                </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-sm btn-primary" id="btn_save_settings">Save</button>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
+
+
