@@ -10,47 +10,46 @@
 </head>
 <body>
     <div>
-        <button id="show_customer_statements_tab" class="btn btn-primary nav-button" data-page-id="customer_statements_tab">Customer Statements</button>
+        <button id="show_statements_tab" class="btn btn-primary nav-button" data-page-id="statements_tab">Statements</button>
         <button id="show_settings_tab" class="btn btn-primary nav-button" data-page-id="settings_tab">Settings</button>
     </div>
     <div class="container mt-3 w-100">
-        <div id="customer_statements_tab" class="content-page">
-            <h2 class="text-center">Customer Statements</h2>
-            <table id="customer_statements_table" class="table table-bordered">
+        <div id="statements_tab" class="content-page">
+            <h2 class="text-center">Statements</h2>
+            <table id="statements_table" class="table table-bordered">
                 <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Total Owed</th>
+                    <th>Due</th>
+                    <th>30+ Days</th>
+                    <th>Scout Account</th>
                 </tr>
                 </thead>
                 <tbody>
                 </tbody>
             </table>
             <button class="btn btn-sm btn-primary" id="btn_open_all_statements">Open All</button>
+            <button class="btn btn-sm btn-primary" id="btn_export_statement_report">Export Report</button>
         </div>
 
         <div id="settings_tab" class="content-page">
             <h2 class="text-center">Settings</h2>
             <table class="table table-bordered">
                 <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Value</th>
-                </tr>
+                    <tr>
+                        <th>Name</th>
+                        <th>Value</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>API Token</td>
-                    <td><input id="api_token" type="password"></td>
-                </tr>
-                <tr>
-                    <td>Business ID</td>
-                    <td><input id="business_id" type="text"></td>
-                </tr>
-                <tr>
-                    <td>Business GUID</td>
-                    <td><input id="business_guid" type="text"></td>
-                </tr>
+                    <tr>
+                        <td>API Token</td>
+                        <td><input id="api_token" type="password"></td>
+                    </tr>
+                    <tr>
+                        <td>Business ID</td>
+                        <td><input id="business_id" type="text"></td>
+                    </tr>
                 </tbody>
             </table>
             <button class="btn btn-sm btn-primary" id="btn_save_settings">Save</button>
