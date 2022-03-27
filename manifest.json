@@ -4,11 +4,32 @@
     "description": "Helper functions for various Wave workflows",
     "manifest_version": 3,
     "author": "Jeremy Brooks",
-    "action":{
-        "default_popup": "index.html",
+    "action": {
+        "default_popup": "popup.html",
         "default_title": "Wave Helper"
     },
+    "background": {
+        "service_worker": "background.js"
+    },
     "permissions": [
-        "storage"
+        "storage",
+        "contextMenus",
+        "tabs"
+    ],
+    "host_permissions": [
+        "*://next.waveapps.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://next.waveapps.com/*"
+            ],
+            "js": [
+                "utils.js",
+                "settings.js",
+                "api_client.js",
+                "content.js"
+            ]
+        }
     ]
 }
