@@ -5,14 +5,14 @@ let settings = {
     
     readSetting: async function readSetting(key) {
         return new Promise((resolve) => {
-            chrome.storage.local.get([key], function (result) {
+            chrome.storage.sync.get([key], function (result) {
                 resolve(result[key]);
             });
         })
     },
 
     saveSettings: async function (values) {
-        chrome.storage.local.set(values);
+        chrome.storage.sync.set(values);
         await settings.loadSettings();
     },
 

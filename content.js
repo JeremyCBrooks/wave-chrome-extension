@@ -1,21 +1,5 @@
-// DOM 3 Events
-var dispatchKeyboardEvent = function (target, initKeyboradEvent_args) {
-    var e = document.createEvent("KeyboardEvents");
-    e.initKeyboardEvent.apply(e, Array.prototype.slice.call(arguments, 1));
-    target.dispatchEvent(e);
-};
-var dispatchTextEvent = function (target, initTextEvent_args) {
-    var e = document.createEvent("TextEvent");
-    e.initTextEvent.apply(e, Array.prototype.slice.call(arguments, 1));
-    target.dispatchEvent(e);
-};
-var dispatchSimpleEvent = function (target, type, canBubble, cancelable) {
-    var e = document.createEvent("Event");
-    e.initEvent.apply(e, Array.prototype.slice.call(arguments, 1));
-    target.dispatchEvent(e);
-};
-
 async function insertStatementMessage() {
+    document.activeElement.value = 'Generating statement message. When this is blank, message is ready to be pasted...';
     await settings.loadSettings();
 
     const email = document.querySelector("input[type='email']").value;
